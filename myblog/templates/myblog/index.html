@@ -18,7 +18,7 @@
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +93,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4 d-flex">
             <div class="card">
               <img src="{% static 'images/1.jpg' %}" class="card-img-top" alt="Project 1" />
               <div class="card-body">
@@ -101,7 +101,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4 d-flex">
             <div class="card">
               <img src="{% static 'images/2.jpg' %}" class="card-img-top" alt="Project 2" />
               <div class="card-body">
@@ -109,7 +109,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4 d-flex">
             <div class="card">
               <img src="{% static 'images/3.jpg' %}" class="card-img-top" alt="Project 3" />
               <div class="card-body">
@@ -117,7 +117,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4 d-flex">
             <div class="card">
               <img src="{% static 'images/4.jpg' %}" class="card-img-top" alt="Project 4" />
               <div class="card-body">
@@ -125,7 +125,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-4 d-flex">
             <div class="card">
               <img src="{% static 'images/5.jpg' %}" class="card-img-top" alt="Project 5" />
               <div class="card-body">
@@ -161,9 +161,8 @@
                 <input type="text" class="form-control" id="name" aria-describedby="name" />
               </div>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
@@ -174,18 +173,41 @@
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="5%" stop-color="#1cb5e0"></stop>
+            <stop offset="95%" stop-color="#000046"></stop>
+          </linearGradient>
+        </defs>
         <path
-          fill="#0d6efd"
+          d="M 0,600 C 0,600 0,200 0,200 C 90.58373205741626,203.16746411483254 181.1674641148325,206.33492822966508 291,206 C 400.8325358851675,205.66507177033492 529.9138755980862,201.82775119617227 611,205 C 692.0861244019138,208.17224880382773 725.1770334928229,218.35406698564591 820,229 C 914.8229665071771,239.64593301435409 1071.377990430622,250.755980861244 1185,246 C 1298.622009569378,241.244019138756 1369.311004784689,220.622009569378 1440,200 C 1440,200 1440,600 1440,600 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="url(#gradient)"
+          fill-opacity="0.53"
+          class="transition-all duration-300 ease-in-out delay-150 path-0"
+        ></path>
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="5%" stop-color="#1cb5e0"></stop>
+            <stop offset="95%" stop-color="#000046"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          d="M 0,600 C 0,600 0,400 0,400 C 80.84210526315792,372.6602870813397 161.68421052631584,345.3205741626794 260,356 C 358.31578947368416,366.6794258373206 474.1052631578947,415.37799043062205 572,416 C 669.8947368421053,416.62200956937795 749.8947368421052,369.1674641148325 847,374 C 944.1052631578948,378.8325358851675 1058.3157894736842,435.95215311004785 1160,449 C 1261.6842105263158,462.04784688995215 1350.842105263158,431.02392344497605 1440,400 C 1440,400 1440,600 1440,600 Z"
+          stroke="none"
+          stroke-width="0"
+          fill="url(#gradient)"
           fill-opacity="1"
-          d="M0,96L34.3,90.7C68.6,85,137,75,206,101.3C274.3,128,343,192,411,224C480,256,549,256,617,218.7C685.7,181,754,107,823,112C891.4,117,960,203,1029,250.7C1097.1,299,1166,309,1234,272C1302.9,235,1371,149,1406,106.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+          class="transition-all duration-300 ease-in-out delay-150 path-1"
         ></path>
       </svg>
     </section>
     <!-- Akhir Contact -->
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-5">
+    <footer class="text-white text-center pb-5">
       <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-white fw-bold" href="https://www.instagram.com/risbang/">Riswanto</a></p>
     </footer>
     <!-- Akhir Footer -->
